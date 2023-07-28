@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Formulaire de création de liste de mots:</h1>
+    <form action="/listeNom" method="get" th:object="${form}">
+        <div>
+            <label for="in-qtt">Nombre de mots:</label><br>
+            <input type="number" th:field="*{qtt}" id="in-qtt">
+        </div>
+        <div>
+            <label for="in-length">Longueur des mots:</label><br>
+            <input type="number" th:field="*{length}" id="in-length">
+        </div>
+        <button type="submit">Envoyer</button>
+    </form>
+</body>
+</html>
